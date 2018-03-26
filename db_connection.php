@@ -2,8 +2,8 @@
 
 function connect_db(){
     $host = "127.0.0.1";
-    $userName = "root";
-    $password = "";
+    $userName = "test";
+    $password = "test";
     $database = "sl_promotions";
     $mysqli = new mysqli($host, $userName, $password, $database); 
     if ($mysqli->connect_errno) {        
