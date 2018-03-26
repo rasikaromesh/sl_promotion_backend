@@ -1,15 +1,13 @@
 <?php
 header("Content-Type:application/json");
-//require "data.php";
-require "db_connection.php";
+require "data.php";
+//require "db_connection.php";
 
 if(!empty($_GET['name']))
 {
     $name=$_GET['name'];
-    if($name == "db"){
-        $_conn = connect_db();
-        //$data = get_today_promotions();
-        response(200,test_db_connection($_conn),$data);
+    if($name == "db" || empty($_GET['name'])){
+        get_today_promotions();
     }
 	// $price = get_price($name);
 	
